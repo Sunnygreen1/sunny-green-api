@@ -9,13 +9,11 @@ require('dotenv').config();
 const app = express();
 
 app.use(bodyParser.json());
-app.use(cors({
-    origin: "http://localhost:3000"
-}));
+app.use(cors());
 
 
-app.listen(process.env.PORT||3000, () => {
-    console.log(`Le serveur écoute sur le port 3000`);
+app.listen(process.env.PORT||5500, () => {
+    console.log(`Le serveur écoute sur le port 5500`);
   });
 
 // Route pour avoir l'Image et la télécharger
